@@ -2,7 +2,7 @@
 
 --------------------------------------------------------------------------------
 
-ParlAI (pronounced “par-lay”) is a framework for dialog AI research, implemented in Python.
+ParlAI (pronounced "par-lay") is a framework for dialog AI research, implemented in Python.
 
 Its goal is to provide researchers:
 - a unified framework for training and testing dialog models
@@ -17,7 +17,7 @@ Included are examples of training neural models with [PyTorch](http://pytorch.or
 Our aim is for the number of tasks and agents that train on them to grow in a community-based way.
 
 ParlAI is described in the following paper:
-[“ParlAI: A Dialog Research Software Platform", arXiv:1705.06476](https://arxiv.org/abs/1705.06476).
+["ParlAI: A Dialog Research Software Platform", arXiv:1705.06476](https://arxiv.org/abs/1705.06476).
 
 
 We are in an early-release Beta. Expect some adventures and rough edges.<br> 
@@ -122,8 +122,8 @@ All needed data will be downloaded to ~/ParlAI/data, and any non-data files (suc
 ## Worlds, agents and teachers
 The main concepts (classes) in ParlAI:
 - world - defines the environment (can be very simple, just two agents talking to each other).
-- agent – an agent in the world, e.g. the learner. (There can be multiple learners.)
-- teacher – a type of agent that talks to the learner, implements one of the tasks listed before.
+- agent - an agent in the world, e.g. the learner. (There can be multiple learners.)
+- teacher - a type of agent that talks to the learner, implements one of the tasks listed before.
 
 After defining a world and the agents in it, a main loop can be run for training, testing or displaying, which calls the function world.parley(). The skeleton of an example main is given in the left panel, and the actual code for parley() on the right.
 
@@ -243,7 +243,7 @@ Our first release includes the following datasets (shown in the left panel), and
 
 See [here](https://github.com/facebookresearch/ParlAI/blob/master/parlai/tasks/task_list.py) for the current complete task list.
 
-Choosing a task in ParlAI is as easy as specifying it on the command line, as shown in the above image (right). If the dataset has not been used before, ParlAI will automatically download it. As all datasets are treated in the same way in ParlAI (with a single dialog API), a dialog agent can in principle switch training and testing between any of them. Even better, one can specify many tasks at once (multi-tasking) by simply providing a comma-separated list, e.g.  the command line “-t babi,squad”, to use those two datasets, or even all  the QA datasets at once  (-t #qa) or indeed every task in ParlAI at once (-t #all). The aim is to make it easy to build and evaluate very rich dialog models.
+Choosing a task in ParlAI is as easy as specifying it on the command line, as shown in the above image (right). If the dataset has not been used before, ParlAI will automatically download it. As all datasets are treated in the same way in ParlAI (with a single dialog API), a dialog agent can in principle switch training and testing between any of them. Even better, one can specify many tasks at once (multi-tasking) by simply providing a comma-separated list, e.g.  the command line "-t babi,squad", to use those two datasets, or even all  the QA datasets at once  (-t #qa) or indeed every task in ParlAI at once (-t #all). The aim is to make it easy to build and evaluate very rich dialog models.
 
 
 Each task folder contains:
